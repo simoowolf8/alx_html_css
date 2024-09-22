@@ -1,0 +1,40 @@
+/* Body as a flex container with vertical alignment (column) */
+body {
+    display: flex;
+    flex-direction: column;  /* Stack <header>, <main>, and <footer> vertically */
+    margin: 0;
+    padding: 0;
+    height: 100vh;  /* Ensure the body takes up the full height of the viewport */
+}
+
+/* Main as a flex container with horizontal alignment (row) */
+main {
+    display: flex;
+    flex-direction: row;  /* Align <article> and <aside> side by side */
+    flex: auto;  /* Allow <main> to grow and shrink as necessary */
+    height: 100%;  /* Ensure <main> takes full height of available space */
+}
+
+/* Article takes 2/3 of the available space */
+article {
+    flex: 2;  /* Use 2/3 of the width */
+    overflow-y: auto;  /* Allow vertical scrolling if content overflows */
+    padding: 20px;
+    background-color: #f4f4f4; /* Optional: background for clarity */
+}
+
+/* Aside takes 1/3 of the available space */
+aside {
+    flex: 1;  /* Use 1/3 of the width */
+    overflow-y: auto;  /* Allow vertical scrolling if content overflows */
+    padding: 20px;
+    background-color: #e2e2e2; /* Optional: background for clarity */
+}
+
+/* Optional Styling for Header and Footer */
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
