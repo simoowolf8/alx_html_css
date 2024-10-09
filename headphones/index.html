@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Headphones</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="hamburger">&#9776;</div> <!-- Hamburger Menu Icon -->
+        <div class="logo">
+            <img src="images/logo.png" alt="Headphones Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">What we do</a></li>
+                <li><a href="#">Our results</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+            <p>Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+            <a href="#" class="cta-btn">CALL TO ACTION</a>
+        </div>
+        <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('header nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

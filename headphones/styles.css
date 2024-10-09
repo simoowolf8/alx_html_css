@@ -1,0 +1,159 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f0f0;
+    color: white;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none; /* Hide by default */
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('images/headp1.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px; 
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-bottom: 80px;
+}
+
+.cta-btn {
+    background-color: #ff4b5c;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background-color: #ff6f78;
+}
+
+.description {
+    font-size: 1em;
+    max-width: 800px;
+    margin-top: 30px;
+    line-height: 1.6;
+    padding: 0 20px;
+    margin-top: 100px;
+}
+
+/* Responsive Design */
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    /* Hamburger menu will show in place of the nav */
+    .hamburger {
+        display: block; /* Show hamburger menu on mobile */
+    }
+
+    /* Hide navigation initially on mobile */
+    header nav ul {
+        flex-direction: column;
+        position: absolute;
+        right: 10px;
+        top: 80px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 5px;
+        display: none; /* Initially hide on mobile */
+    }
+
+    header nav ul.show {
+        display: flex; /* Show nav when toggled */
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+
+    header .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .hero {
+        height: 100vh;
+        padding-top: 50px;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+        margin-bottom: 40px;
+    }
+
+    .cta-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .description {
+        font-size: 0.9em;
+        margin-top: 50px;
+    }
+}
